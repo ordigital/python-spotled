@@ -483,8 +483,8 @@ class TextData:
             else:
                 d.write_bytes(ColorData(255, 255, 255).serialize())
             d.write_bytes(CharacterData(character).serialize())
-        d.write_bytes(SpeedData(self.speed).serialize())
         d.write_bytes(TimeData(0).serialize())
+        d.write_bytes(SpeedData(self.speed).serialize())
         d.write_bytes(EffectData(self.effects).serialize())
         return d.to_bytes()
 
